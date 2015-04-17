@@ -48,4 +48,4 @@ I have also implemented specialized entities: hdr sky-dome with sun & clouds, wa
  - Depth Of Field + Dynamic Eye Adaptaion
  - HDR Rendering + Bright Pass + Tone Mapping
  - Heat & Haze
- - Volumetric Light Scatterin-g
+ - Volumetric Light Scattering
