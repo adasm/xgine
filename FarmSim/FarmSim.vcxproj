@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{53EBB8A9-BD7A-463F-B785-115FC8441073}</ProjectGuid>
+    <RootNamespace>FarmSim</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <FixedBaseAddress>
+      </FixedBaseAddress>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="CFGLoader.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Dynamics.cpp" />
+    <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="NxWheel.cpp" />
+    <ClCompile Include="Trailer.cpp" />
+    <ClCompile Include="Tractor.cpp" />
+    <ClCompile Include="Combine.cpp" />
+    <ClCompile Include="TriPod.cpp" />
+    <ClCompile Include="WheelSet.cpp" />
+    <ClCompile Include="VehicleController.cpp" />
+    <ClCompile Include="VehicleEngine.cpp" />
+    <ClCompile Include="Allocator.cpp" />
+    <ClCompile Include="NXU_Asc2Bin.cpp" />
+    <ClCompile Include="NXU_ColladaExport.cpp" />
+    <ClCompile Include="NXU_ColladaImport.cpp" />
+    <ClCompile Include="NXU_cooking.cpp" />
+    <ClCompile Include="NXU_customcopy.cpp" />
+    <ClCompile Include="NXU_File.cpp" />
+    <ClCompile Include="NXU_Geometry.cpp" />
+    <ClCompile Include="NXU_GraphicsMesh.cpp" />
+    <ClCompile Include="NXU_helper.cpp" />
+    <ClCompile Include="NXU_hull.cpp" />
+    <ClCompile Include="NXU_PhysicsExport.cpp" />
+    <ClCompile Include="NXU_PhysicsInstantiator.cpp" />
+    <ClCompile Include="NXU_ScaledCopy.cpp" />
+    <ClCompile Include="NXU_schema.cpp" />
+    <ClCompile Include="NXU_SchemaStream.cpp" />
+    <ClCompile Include="NXU_Streaming.cpp" />
+    <ClCompile Include="NXU_string.cpp" />
+    <ClCompile Include="NXU_tinystr.cpp" />
+    <ClCompile Include="NXU_tinyxml.cpp" />
+    <ClCompile Include="NXU_tinyxmlerror.cpp" />
+    <ClCompile Include="NXU_tinyxmlparser.cpp" />
+    <ClCompile Include="CharacterController.cpp" />
+    <ClCompile Include="Dimms.cpp" />
+    <ClCompile Include="ActionBox.cpp" />
+    <ClCompile Include="Plow.cpp" />
+    <ClCompile Include="Seeder.cpp" />
+    <ClCompile Include="Cutter.cpp" />
+    <ClCompile Include="TriggerReport.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SceneLoader.cpp" />
+    <ClCompile Include="GrassManager.cpp" />
+    <ClCompile Include="FieldEntity.cpp" />
+    <ClCompile Include="GrassMesh.cpp" />
+    <ClCompile Include="FieldSector.cpp" />
+    <ClCompile Include="HarvestShop.cpp" />
+    <ClCompile Include="HarvestDumpPoint.cpp" />
+    <ClCompile Include="KeyboardManager.cpp" />
+    <ClCompile Include="DayNightManager.cpp" />
+    <ClCompile Include="LensFlare.cpp" />
+    <ClCompile Include="SunEntity.cpp" />
+    <ClCompile Include="VegetationManager.cpp" />
+    <ClCompile Include="TreeParams.cpp" />
+    <ClCompile Include="TerrainLoader.cpp" />
+    <ClCompile Include="ShopData.cpp" />
+    <ClCompile Include="TractorShop.cpp" />
+    <ClCompile Include="AgriDeviceShop.cpp" />
+    <ClCompile Include="Traffic.cpp" />
+    <ClCompile Include="NavigationMesh.cpp" />
+    <ClCompile Include="TrafficActor.cpp" />
+    <ClCompile Include="TreeType.cpp" />
+    <ClCompile Include="Headers.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="CFGLoader.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Dynamics.h" />
+    <ClInclude Include="EntityData.h" />
+    <ClInclude Include="UserData.h" />
+    <ClInclude Include="Stream.h" />
+    <ClInclude Include="NxWheel.h" />
+    <ClInclude Include="NxWheelDesc.h" />
+    <ClInclude Include="ITrailer.h" />
+    <ClInclude Include="Trailer.h" />
+    <ClInclude Include="IVehicle.h" />
+    <ClInclude Include="Tractor.h" />
+    <ClInclude Include="Combine.h" />
+    <ClInclude Include="TriPod.h" />
+    <ClInclude Include="WheelSet.h" />
+    <ClInclude Include="VehicleController.h" />
+    <ClInclude Include="AdditionalData.h" />
+    <ClInclude Include="VehicleEngine.h" />
+    <ClInclude Include="Allocator.h" />
+    <ClInclude Include="NXU_Asc2Bin.h" />
+    <ClInclude Include="NXU_ColladaExport.h" />
+    <ClInclude Include="NXU_ColladaImport.h" />
+    <ClInclude Include="NXU_cooking.h" />
+    <ClInclude Include="NXU_customcopy.h" />
+    <ClInclude Include="NXU_File.h" />
+    <ClInclude Include="NXU_Geometry.h" />
+    <ClInclude Include="NXU_GraphicsMesh.h" />
+    <ClInclude Include="NXU_helper.h" />
+    <ClInclude Include="NXU_hull.h" />
+    <ClInclude Include="NXU_PhysicsExport.h" />
+    <ClInclude Include="NXU_PhysicsInstantiator.h" />
+    <ClInclude Include="NXU_ScaledCopy.h" />
+    <ClInclude Include="NXU_schema.h" />
+    <ClInclude Include="NXU_SchemaStream.h" />
+    <ClInclude Include="NXU_SchemaTypes.h" />
+    <ClInclude Include="NXU_Streaming.h" />
+    <ClInclude Include="NXU_string.h" />
+    <ClInclude Include="NXU_tinystr.h" />
+    <ClInclude Include="NXU_tinyxml.h" />
+    <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="Dimms.h" />
+    <ClInclude Include="ActionBox.h" />
+    <ClInclude Include="IAgriDevice.h" />
+    <ClInclude Include="Plow.h" />
+    <ClInclude Include="Seeder.h" />
+    <ClInclude Include="Cutter.h" />
+    <ClInclude Include="TriggerReport.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SceneLoader.h" />
+    <ClInclude Include="GrassManager.h" />
+    <ClInclude Include="FieldEntity.h" />
+    <ClInclude Include="GrassMesh.h" />
+    <ClInclude Include="FieldSector.h" />
+    <ClInclude Include="HarvestShop.h" />
+    <ClInclude Include="HarvestDumpPoint.h" />
+    <ClInclude Include="KeyboardManager.h" />
+    <ClInclude Include="DayNightManager.h" />
+    <ClInclude Include="LensFlare.h" />
+    <ClInclude Include="SunEntity.h" />
+    <ClInclude Include="VegetationManager.h" />
+    <ClInclude Include="TreeParams.h" />
+    <ClInclude Include="TerrainLoader.h" />
+    <ClInclude Include="IDeviceShop.h" />
+    <ClInclude Include="ShopData.h" />
+    <ClInclude Include="TractorShop.h" />
+    <ClInclude Include="AgriDeviceShop.h" />
+    <ClInclude Include="Traffic.h" />
+    <ClInclude Include="NavigationMesh.h" />
+    <ClInclude Include="TrafficActor.h" />
+    <ClInclude Include="TreeType.h" />
+    <ClInclude Include="Headers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XGine\XGine.vcxproj">
+      <Project>{fa1cba49-8f1d-4d63-8cc2-c8f8534d1134}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

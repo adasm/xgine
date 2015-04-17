@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FA1CBA49-8F1D-4D63-8CC2-C8F8534D1134}</ProjectGuid>
+    <RootNamespace>XGineGraph</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XGINE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH_XGine.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Debug\shaders\Common.h" />
+    <ClInclude Include="Kernel.h" />
+    <ClInclude Include="Tokenizer.h" />
+    <ClInclude Include="BCL\huffman.h" />
+    <ClInclude Include="BCL\lz.h" />
+    <ClInclude Include="BCL\rice.h" />
+    <ClInclude Include="BCL\rle.h" />
+    <ClInclude Include="BCL\shannonfano.h" />
+    <ClInclude Include="ResMgr.h" />
+    <ClInclude Include="IRes.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="CubeTexture.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="VolumeTexture.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="PCH_XGine.h" />
+    <ClInclude Include="XGine.h" />
+    <ClInclude Include="Plugin.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="ALaudio\alAudio.h" />
+    <ClInclude Include="ALaudio\al.h" />
+    <ClInclude Include="ALaudio\alc.h" />
+    <ClInclude Include="ALaudio\alut.h" />
+    <ClInclude Include="ALaudio\codec.h" />
+    <ClInclude Include="ALaudio\ogg.h" />
+    <ClInclude Include="ALaudio\os_types.h" />
+    <ClInclude Include="ALaudio\vorbisfile.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="ICamera.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="IEntity.h" />
+    <ClInclude Include="RendObj.h" />
+    <ClInclude Include="SkyDome.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="TerrainManager.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="HQWater.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Vegetation.h" />
+    <ClInclude Include="Surface.h" />
+    <ClInclude Include="Octree.h" />
+    <ClInclude Include="Quadtree.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="MRT.h" />
+    <ClInclude Include="FrustumCulling.h" />
+    <ClInclude Include="ShadowMapping.h" />
+    <ClInclude Include="RenderTextureCube.h" />
+    <ClInclude Include="RenderTexture.h" />
+    <ClInclude Include="RenderList.h" />
+    <ClInclude Include="Renderer2D.h" />
+    <ClInclude Include="OcclusionCulling.h" />
+    <ClInclude Include="ShaderMgr.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Multishader.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MathUtilities.h" />
+    <ClInclude Include="Bounding.h" />
+    <ClInclude Include="IPostprocess.h" />
+    <ClInclude Include="GuassianBlur.h" />
+    <ClInclude Include="Bloom.h" />
+    <ClInclude Include="HDRToneMap.h" />
+    <ClInclude Include="DepthOfField.h" />
+    <ClInclude Include="HeatHaze.h" />
+    <ClInclude Include="VolumetricLightScattering.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\shaders\ZFill.fx" />
+    <None Include="..\Debug\shaders\DeferredFill.fx" />
+    <None Include="..\Debug\shaders\DeferredLight.fx" />
+    <None Include="..\Debug\shaders\ForwardLight.fx" />
+    <None Include="..\Debug\shaders\Bloom.fx" />
+    <None Include="..\Debug\shaders\DOF.fx" />
+    <None Include="..\Debug\shaders\GuassianBlur.fx" />
+    <None Include="..\Debug\shaders\GUIShader.fx" />
+    <None Include="..\Debug\shaders\HDR.fx" />
+    <None Include="..\Debug\shaders\HeatHaze.fx" />
+    <None Include="..\Debug\shaders\Sepia.fx" />
+    <None Include="..\Debug\shaders\VLS.fx" />
+    <None Include="..\Debug\shaders\Billboards.fx" />
+    <None Include="..\Debug\shaders\Grass.fx" />
+    <None Include="..\Debug\shaders\HQWater.fx" />
+    <None Include="..\Debug\shaders\Particles.fx" />
+    <None Include="..\Debug\shaders\SkyDome.fx" />
+    <None Include="..\Debug\shaders\Terrain.fx" />
+    <None Include="..\Debug\shaders\Tree.fx" />
+    <None Include="..\Debug\shaders\Water.fx" />
+    <None Include="..\Debug\shaders\MultishaderDefault.fx" />
+    <None Include="..\Debug\shaders\MultishaderTerrain.fx" />
+    <None Include="..\Debug\shaders\ShadowMapping.fx" />
+    <None Include="..\Debug\shaders\ShadowVolume.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Kernel.cpp" />
+    <ClCompile Include="Tokenizer.cpp" />
+    <ClCompile Include="BCL\huffman.c" />
+    <ClCompile Include="BCL\lz.c" />
+    <ClCompile Include="BCL\rice.c" />
+    <ClCompile Include="BCL\rle.c" />
+    <ClCompile Include="BCL\shannonfano.c" />
+    <ClCompile Include="ResMgr.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="CubeTexture.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="VolumeTexture.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="XGine.cpp" />
+    <ClCompile Include="Plugin.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="ALaudio\alAudio.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="RendObj.cpp" />
+    <ClCompile Include="SkyDome.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TerrainManager.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="HQWater.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Vegetation.cpp" />
+    <ClCompile Include="Surface.cpp" />
+    <ClCompile Include="Quadtree.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="MRT.cpp" />
+    <ClCompile Include="ShadowMapping.cpp" />
+    <ClCompile Include="RenderTextureCube.cpp" />
+    <ClCompile Include="RenderTexture.cpp" />
+    <ClCompile Include="RenderList.cpp" />
+    <ClCompile Include="Renderer2D.cpp" />
+    <ClCompile Include="OcclusionCulling.cpp" />
+    <ClCompile Include="ShaderMgr.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Multishader.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MathUtilities.cpp" />
+    <ClCompile Include="GuassianBlur.cpp" />
+    <ClCompile Include="Bloom.cpp" />
+    <ClCompile Include="HDRToneMap.cpp" />
+    <ClCompile Include="DepthOfField.cpp" />
+    <ClCompile Include="HeatHaze.cpp" />
+    <ClCompile Include="VolumetricLightScattering.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
