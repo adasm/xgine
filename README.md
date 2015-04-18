@@ -1,6 +1,6 @@
 # xgine
 
-*** Last update: 2009 ***
+*** Last update: december 2009 ***
 
 XGine is multi-purpose 3d graphics engine, written in C++ from ground up by me. It is based on DirectX 9.0 and has a plugin architecture, so it is possible to replace one component with another (of course, the same interface is a must). I decided to implement a seperate library (dll) called Kernel, which offers some low-level tasks to be done, e.g:  logging, loading files (in background) from disk or cache file (archive) and testing stuff like memory manager, profiler, timer.
 
