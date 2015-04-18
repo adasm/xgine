@@ -1,4 +1,7 @@
 # xgine
+
+*** Last update: 2009 ***
+
 XGine is multi-purpose 3d graphics engine, written in C++ from ground up by me. It is based on DirectX 9.0 and has a plugin architecture, so it is possible to replace one component with another (of course, the same interface is a must). I decided to implement a seperate library (dll) called Kernel, which offers some low-level tasks to be done, e.g:  logging, loading files (in background) from disk or cache file (archive) and testing stuff like memory manager, profiler, timer.
 
 Engine itself is a result of over six years of work (approx. 20 000 lines of engine code + 6 000 lines of gpu shaders). During that time I have changed the critical architecture elements several times to find the most suitable and efficient design. Now it is built upon a dynamic scene managment system, material system with support of multishaders and optimized deferred renderer with hdr post-process effects, such as: dynamic tone mapping + bright pass, dynamic depth of field (with eye adaptaion) and well-known volumetric light shafts done in screen space.
